@@ -1,3 +1,3 @@
 # IXD-256-Shiya
 
-assigment 2 link: [assigment2/][assigment2/]
+assigment 2 link: [assignment2/][assignment2/]
