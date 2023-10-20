@@ -1,9 +1,9 @@
 # assignment1
 ## Incense Holder
-<br>State "start": light show up for 1 sec
-<br>State "open": no light
-<br>State "close": rainbow light on
-<br>State "finish": light off
+<br>State "START": light show up for 1 sec
+<br>State "OPEN": no light
+<br>State "CLOSE": rainbow light on
+<br>State "FINISH": light off
 
 
 
