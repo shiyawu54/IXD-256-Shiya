@@ -14,36 +14,29 @@ def draw():
     global data_string, data_list
     global sensor_val, button_val
 
-    # assign content of "data" div on index.html page to variable:
     data_string = document.getElementById("data").innerText
     # split data_string by comma, making a list:
     data_list = data_string.split(',')
 
-    # assign 1st item of data_list to sensor_val:
     sensor_val = int(data_list[0])
-    # assign 2nd item of data_list to button_val:
     button_val = int(data_list[1])
     p5.noStroke()
     p5.fill(0)
     p5.text('sensor_val = ' + str(sensor_val), 10, 20)
     p5.text('button_val = ' + str(button_val), 10, 35)
 
-    # change fill color with button value:
     if(button_val == 0):
         p5.fill(255)  # red fill
     else:
         p5.fill(200,60,60)  # white fill
 
-    # Draw rotating ellipses around a central circle
     p5.push()
     p5.translate(p5.width/2, p5.height/2)
     angle_offset = sensor_val
 
-    # Scale the flower based on button_val
     scaling_factor = 1.5 if button_val == 1 else 1
     p5.scale(scaling_factor)
 
-    # Draw intricate petals around the center
     num_petals = 5
     petal_distance = 90
     petal_length = 200
@@ -58,7 +51,6 @@ def draw():
         p5.translate(x, y)
         p5.rotate(petal_angle + p5.HALF_PI)
         
-        # Draw intricate petal with multiple bezier curves
         p5.beginShape()
         p5.vertex(0, -petal_length/2)
         p5.bezierVertex(petal_width/6, -petal_length/3, petal_width/4, -petal_length/4, petal_width/3, 0)
@@ -69,7 +61,6 @@ def draw():
         
         p5.pop()
 
-    # Draw the center of the flower with a pattern
     p5.fill(230)
     p5.ellipse(0, 0, 80, 80)
     p5.fill(100,80,180)
